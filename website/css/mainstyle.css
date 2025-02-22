@@ -7,3 +7,8 @@ form {
     margin-right: auto;
     width: 265px;
 }
+input[type="submit"] {
+    position: relative;
+    left: 100px;
+    width: 100px;
+}
