@@ -1,14 +1,43 @@
-form {
+form.login {
     border: 1px solid black;
     position: absolute;
     right: 0;
     left: 0;
+    margin-top: 15%;
     margin-left: auto;
     margin-right: auto;
-    width: 265px;
+    padding: 25px;
+    width: 20%;
+    background-color: #131117d0;
+    color: white;
+    border-radius: 15px;;
 }
-input[type="submit"] {
+form.login input[type="submit"] {
     position: relative;
-    left: 100px;
-    width: 100px;
+    margin-left: 25%;
+    width: 40%;
+}
+form.login input[type="text"], form.login input[type="password"]  {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.header, .header input[type="button"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 0px;
+    background: #1b52d7;
+    border: 1px solid black;
+}
+.header input[type="button"] {
+    color: white;
+    width: fit-content;
+}
+.header input[type="button"]:hover {
+    background: #021C8B;
+}
+body {
+    margin: 0px;
+    background-color: #13111f;
+    background-image: url("../images/wallpaper1.jpg")
 }

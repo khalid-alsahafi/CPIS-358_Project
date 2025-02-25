@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .with_blur {
+                text-shadow: 4px 2px 4px black;
+            }
+            .without_blur {
+                text-shadow: 4px 2px black;
+            }
+            .red_text {
+                color: red;
+            }
+            .slightly_rounded {
+                border-radius: 10px;
+                border: 3px solid blue;
+                background-color: lightcyan;
+                padding: 5px;
+                font-size: 20pt;
+            }
+            .very_rounded {
+                border-radius: 50px;
+                border: 3px solid blue;
+                background-color: lightcyan;
+                padding: 5px;
+                font-size: 20pt;
+            }
+
+            .image_rounded_corners {
+                width: 150px;
+                border-radius: 150px;
+                border: 5px dashed green;
+                margin: 30px;
+                padding: 20px;
+            }
+
+            .solid_box_shadow {
+                box-shadow: 10px 10px orange;
+                
+                width: 100px;
+                background-color: peachpuff;
+            }
+            .blurry_box_shadow {
+                box-shadow: -10px -10px 15px orange;
+                width: 100px;
+                background-color: peachpuff;
+                margin-left: 50px;
+            }
+            .simple_gradient {
+                background-image: linear-gradient(orange, violet);
+                padding: 20px;
+                font-size: 20pt;
+                width: max-content;
+            }
+            .simple_gradient_right {
+                background-image: linear-gradient(to right, cyan, red);
+                border: 1px solid black;
+                color: white;
+                padding: 20px;
+                font-size: 20pt;
+                width: max-content;
+            }
+
+            .simple_gradient_diagonal {
+                background-image: linear-gradient(to bottom right, green, gold);
+                border: 1px solid black;
+                color: white;
+                padding: 20px;
+                font-size: 20pt;
+                width: max-content;
+            }
+
+            .three_color_gradient {
+                background-image: linear-gradient(to right bottom, red, green, blue);
+                width: fit-content;
+                padding: 1em;
+                color: white;
+                font-size: 20pt;
+            }
+
+            .radial_gradient_example1 {
+                background-image: radial-gradient(
+                    farthest-corner ellipse
+                    at 50% 30%,
+                    darkblue 25%,
+                    red 25% 30%, 
+                    magenta 67%, 
+                    green 100%);
+                width: 700px;
+                height: 400px;
+            }
+            .radial_gradient_example2 {
+                background-image: radial-gradient(
+                    closest-side circle
+                    at 50% 30%,
+                    darkblue 15%,
+                    red 25% 30%, 
+                    magenta 67%, 
+                    green 67% 100%);
+                width: 700px;
+                height: 400px;
+            }
+
+            .multi_bg_example1 {
+                border: 5px solid blue;
+                background: url(../images/cat.png), url(../images/tree.png);
+                background-position: left bottom, right bottom;
+                background-repeat: no-repeat;
+                background-origin: border-box, content-box;
+                padding: 20px;
+                color: darkred;
+            }
+            .multi_bg_example2 {
+                border: 5px solid blue;
+                background: url(../images/cat.png), url(../images/tree.png);
+                background-position: left bottom, right bottom;
+                background-repeat: no-repeat;
+                background-origin: content-box, border-box;
+                padding: 20px;
+                color: darkred;
+            }
+
+            .multi_bg_example3 {
+                border: 5px solid blue;
+                background: url(../images/cat.png), url(../images/tree.png);
+                background-position: right bottom, right bottom;
+                background-repeat: no-repeat;
+                background-origin: content-box, content-box;
+                padding: 20px;
+                color: darkred;
+            }
+
+            .faint_background {
+                background: rgba(50, 187, 241, 0.571);
+                width: 250px;
+            }
+
+            .columns_example {
+                border: 1px solid black;
+            }
+            .columns_example h1 {
+                text-align: center;
+                background-color: aquamarine;
+                margin-right: 5em;
+                margin-left: 5em;
+            }
+            .columns_example p {
+                column-count: 3;
+                column-rule: 4px dotted darkblue;
+                column-gap: 10%;
+                text-align: justify;
+                padding: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="with_blur red_text">Text with blurred shadow</h1>
+        <h1 class="without_blur red_text">Text with solid shadow</h1>
+
+        <label class="slightly_rounded">Slightly rounded corners</label>
+        <br>
+        <br>
+        <label class="very_rounded">Very rounded corners</label>
+        <br>
+        <img src="../images/fcit logo.jpg" class="image_rounded_corners">
+        <br>
+        <br>
+        <br>
+        <label class="solid_box_shadow">Solid box shadow, bottom-right</label>
+        <label class="blurry_box_shadow">Blurry box shadow, top-left</label>
+        <p class="simple_gradient without_blur">A simple "to bottom" gradient</p>
+        <p class="simple_gradient_right without_blur">A simple "to right" gradient</p>
+        <p class="simple_gradient_diagonal without_blur">A simple "diagonal" gradient</p>
+        <p class="three_color_gradient">Three color gradient on a paragraph tag</p>
+        <h1 class="radial_gradient_example1"></h1>
+        <h1 class="radial_gradient_example2"></h1>
+        <h3>background-origin: border-box, content-box</h3>
+        <div class="multi_bg_example1">
+            <div style="border: 3px dashed black;" class="with_blur">
+                <h1>Hello World</h1>
+                <p class="faint_background">The "cat.png" starts from the bottom left corner of the "border box"</p>
+                <p class="faint_background">The "tree.png" starts from the bottom right corner of the "content box"</p>
+            </div>
+        </div>
+        <br>
+        <h3>background-origin: content-box, border-box</h3>
+        <div class="multi_bg_example2">
+            <div style="border: 3px dashed black;" class="with_blur">
+                <h1>Hello World</h1>
+                <p class="faint_background">The "cat.png" starts from the bottom left corner of the "content box"</p>
+                <p class="faint_background">The "tree.png" starts from the bottom right corner of the "border box"</p>
+            </div>
+        </div>
+        <br>
+        <div class="multi_bg_example3">
+            <div style="border: 3px dashed black;" class="with_blur">
+                <h1>Hello World</h1>
+                <p class="faint_background">The "cat.png" is drawn in front of "tree.png" becuase it appears first in the "background" property list</p>
+            </div>
+        </div>
+        <br>
+        <div class="columns_example">
+            <h1>CSS</h1>
+            <p>Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+
+CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts. This separation can improve content accessibility, since the content can be written without concern for its presentation; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+
+Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternative formatting if the content is accessed on a mobile device.
+
+The name cascading comes from the specified priority scheme to determine which declaration applies if more than one declaration of a property match a particular element. This cascading priority scheme is predictable.
+
+The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.
+
+In addition to HTML, other markup languages support the use of CSS including XHTML, plain XML, SVG, and XUL. CSS is also used in the GTK widget toolkit. </p>
+        </div>
+
+    </body>
+</html>
