@@ -22,22 +22,42 @@ form.login input[type="text"], form.login input[type="password"]  {
     width: 100%;
     margin-bottom: 1em;
 }
+
+form.login a {
+    position: relative;
+    top: 8px;
+    color: orange;
+    text-align: center;
+}
 .header, .header a {
     width: 100%;
     height: 40px;
-    margin-top: 0px;
-    background: #1b52d7;
-    border: 1px solid black;
+    background: #131117d0;
+    font-size: 0px;
 }
 .header a {
-    color: white;
+    color: rgb(225, 231, 241);
+    background-color: #f93e13;
+    position: relative;
+    display: inline-block;
     width: fit-content;
+    height:initial;
+    font-size: 18pt;
+    border-right: 1px solid black;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    max-height: 100%;
+    text-decoration: none;
+    border-radius: 10px;
 }
 .header a:hover {
-    background: #021C8B;
+    background: #cb300d;
 }
 body {
     margin: 0px;
     background-color: #13111f;
     background-image: url("../images/wallpaper1.jpg")
 }
+
