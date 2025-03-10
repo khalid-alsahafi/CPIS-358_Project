@@ -12,6 +12,10 @@ form.login {
     color: white;
 }
 
+.dark_background {
+    background-color: #131117d0;
+}
+
 .rounded_corners {
     border-radius: 5px;
 }
@@ -31,6 +35,11 @@ form.login a {
     top: 8px;
     color: orange;
     text-align: center;
+}
+
+form.sign_up a{
+    position: relative;
+    top: 0px;
 }
 .header, .header a {
     width: 100%;
