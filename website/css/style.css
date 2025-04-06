@@ -227,7 +227,7 @@ footer {
 /* home Section (Homepage) */
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('../homePic3.jpg')
+              url('../images/homePic3.jpg')
               no-repeat center center/cover;
   color: white;
   text-align: center;
