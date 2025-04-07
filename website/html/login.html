@@ -2,19 +2,23 @@
 <html>
     <head>
         <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
         <link rel="stylesheet" type="text/css" href="../css/mainstyle.css"/>
-        <script src="../js/include_header.js"></script>
+        <script src="../js/include_header_and_footer.js"></script>
     </head>
-    <body>
+    <body class="login">
         <div id="header"></div>
-        <div class="login_form">
+        <div>
             <form method="post" class="login rounded_corners">
                 <input type="text" placeholder="Username">
                 <input type="password" placeholder="Password">
-                <input type="submit" value="Login">
+                <button class="submit-login">Login</button>
             <br>
             <a href="../html/forgot_password.html">Forgot username or password?</a>
+            <br>
+            <a href="../html/sign_up.html">Don't have an account?</a>
             </form>
         </div>
+        <div id="footer"></div>
     </body>
 </html>

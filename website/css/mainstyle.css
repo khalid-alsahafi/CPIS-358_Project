@@ -1,28 +1,29 @@
 form.login {
     border: 1px solid black;
-    position: absolute;
+    position: relative;
     right: 0;
     left: 0;
     margin-top: 15%;
+    margin-bottom: 15%;
     margin-left: auto;
     margin-right: auto;
     padding: 25px;
     width: 20%;
-    background-color: #131117d0;
-    color: white;
-}
-
-.dark_background {
-    background-color: #131117d0;
+    background-color: #ffffff;
+    color: var(--dark-color);
+    text-align: center;
+    font-size: 10pt;
 }
 
 .rounded_corners {
     border-radius: 5px;
 }
-form.login input[type="submit"] {
-    position: relative;
-    margin-left: 25%;
-    width: 40%;
+form button.submit-login {
+    width: fit-content;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
 }
 form.login input[type="text"], form.login input[type="password"]  {
     position: relative;
@@ -33,12 +34,13 @@ form.login input[type="text"], form.login input[type="password"]  {
 form.login a {
     position: relative;
     top: 8px;
-    color: orange;
+    color: var(--primary-color);
     text-align: center;
 }
 
 form.sign_up a{
     position: relative;
+    margin: auto;
     top: 0px;
 }
 .header, .header a {
@@ -47,33 +49,15 @@ form.sign_up a{
     background: #131117d0;
     font-size: 0px;
 }
-.header a {
-    color: rgb(225, 231, 241);
-    background-color: #f93e13;
-    position: relative;
-    display: inline-block;
-    width: fit-content;
-    height: initial;
-    font-size: 18pt;
-    border-right: 1px solid black;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-top: 5px;
-    margin-right: 10px;
-    max-height: 100%;
-    text-decoration: none;
-    text-shadow: 0px 0px 5px black;
-    border-radius: 5px;
-}
-.header a:hover {
-    background: #cb300d;
-}
+
 .password_checker {
-    margin-top: 10%;
+    position: relative;
+    margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5%;
     width: 400px;
-    background-color: #131117d0;
+    background-color: var(--light-color);
     padding: 20px;
 }
 
@@ -88,17 +72,22 @@ form.sign_up a{
 }
 body {
     margin: 0px;
-    background-color: #13111f;
-    background-image: url("../images/wallpaper1.jpg");
-    color: white;
+    background-color: var(--light-gray);
+    color: var(--dark-color);
+}
+body.login {
+    background-image: url("../images/login\ background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .password_recommendations {
-    background-color: #13111fd0;
+    background-color: var(--light-color);
     width: fit-content;
     margin-top: 20px;
     margin-left: 10px;
     padding: 10px;
 }
-.general_border {
-    border: 1px solid orange;
+
+.light_shadow {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
