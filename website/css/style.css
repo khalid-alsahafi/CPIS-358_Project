@@ -376,3 +376,20 @@ footer {
   color: var(--gray-color);
   font-style: italic;
 }
+
+
+/* Assessment test Page */
+.question {
+  margin-bottom: 20px;
+}
+
+
+/* resources Page */
+.mr-b {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #4a6fa5;
+
+}
+
+
