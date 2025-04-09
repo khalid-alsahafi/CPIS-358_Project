@@ -178,6 +178,7 @@ footer {
   padding: 0 30px;
 }
 
+
 .footer-logo {
   font-size: 30px;
   font-weight: 800;
@@ -187,6 +188,12 @@ footer {
 
 .footer-links, .footer-contact {
   margin-bottom: 30px;
+}
+.footer-contact a:visited, .footer-contact a{
+  color: var(--primary-color);
+}
+.footer-contact a:hover {
+  color: white;
 }
 
 .footer-links h3, .footer-contact h3 {

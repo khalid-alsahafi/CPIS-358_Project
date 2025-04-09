@@ -95,3 +95,33 @@ body.login {
 .light_shadow {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
+
+table.contacts {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    border-collapse: collapse;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18pt;
+}
+
+table.contacts th {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+table.contacts th, table.contacts td {
+    border: 1px solid var(--dark-color);
+}
+
+table.contacts tr:nth-child(odd) {
+    background-color: rgba(198, 220, 251, 0.816)
+}
+
+div#header {
+    top: 0;
+    position: sticky;
+    z-index: 1;
+}
