@@ -50,14 +50,19 @@ form.sign_up a{
     background-color: var(--light-color);
     padding: 20px;
 }
+.password_checker * {
+    font-size: 20pt;
+}
 .password_checker .strength {
     margin: 0px;
     margin-top: 10px;
     padding: 3px;
     display: block;
 }
-.password_checker input[type="password"] {
+.password_checker input {
     width: 98%;
+    border: 1pt solid black;
+    text-align: center;
 }
 .password_recommendations {
     background-color: var(--light-color);
@@ -91,7 +96,6 @@ body {
     color: var(--dark-color);
 }
 body.login {
-    background-image: url("../images/login\ background.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 }
