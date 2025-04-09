@@ -106,9 +106,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
+  padding: 0.5em;
   max-width: 1400px;
-  margin: 0 auto;
 }
 
 .logo {

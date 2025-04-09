@@ -1,3 +1,4 @@
+/* login page */
 form.login {
     border: 1px solid black;
     position: relative;
@@ -14,10 +15,6 @@ form.login {
     text-align: center;
     font-size: 10pt;
 }
-
-.rounded_corners {
-    border-radius: 5px;
-}
 form button.submit-login {
     width: fit-content;
     background-color: var(--primary-color);
@@ -30,26 +27,19 @@ form.login input[type="text"], form.login input[type="password"]  {
     width: 100%;
     margin-bottom: 1em;
 }
-
 form.login a {
     position: relative;
     top: 8px;
     color: var(--primary-color);
     text-align: center;
 }
-
 form.sign_up a{
     position: relative;
     margin: auto;
     top: 0px;
 }
-.header, .header a {
-    width: 100%;
-    height: 40px;
-    background: #131117d0;
-    font-size: 0px;
-}
 
+/* password checker page */
 .password_checker {
     position: relative;
     margin-top: 5%;
@@ -60,7 +50,6 @@ form.sign_up a{
     background-color: var(--light-color);
     padding: 20px;
 }
-
 .password_checker .strength {
     margin: 0px;
     margin-top: 10px;
@@ -69,6 +58,32 @@ form.sign_up a{
 }
 .password_checker input[type="password"] {
     width: 98%;
+}
+.password_recommendations {
+    background-color: var(--light-color);
+    width: fit-content;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.password_recommendations ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    text-align: left;
+}
+
+/* general styling */
+.rounded_corners {
+    border-radius: 5px;
+}
+.header, .header a {
+    width: 100%;
+    height: 40px;
+    background: #131117d0;
+    font-size: 0px;
 }
 body {
     margin: 0px;
@@ -80,14 +95,6 @@ body.login {
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.password_recommendations {
-    background-color: var(--light-color);
-    width: fit-content;
-    margin-top: 20px;
-    margin-left: 10px;
-    padding: 10px;
-}
-
 .light_shadow {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
