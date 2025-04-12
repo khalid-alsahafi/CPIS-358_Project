@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assessment Results</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/mainstyle.css" />
+  <script src="../js/include_header_and_footer.js"></script>
+
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <section class="results-container">
+      <div class="results-frame">
+        <div class="results-left">
+          <h2>Awareness Score</h2>
+          <div class="circular-progress">
+            <div class="inner-circle">
+              <span id="score" class="score-text">0%</span>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="results-right">
+          <h2>Details</h2>
+          <p>Total Questions: <span id="totalQuestions"></span></p>
+          <p>Points Earned: <span id="pointsEarned"></span></p>
+          <p>Max Points: <span id="maxPoints"></span></p>
+        </div>
+
+        <div class="results-buttons">
+            <a href="resources.html" class="cta-button">View Resources</a>
+            <a href="assessment.html" class="cta-button">Retake Assessment</a>
+    
+        </div>
+      </div>
+      
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script src="../js/result.js"></script>
+</body>
+</html>

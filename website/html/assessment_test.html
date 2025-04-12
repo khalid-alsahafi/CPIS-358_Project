@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/mainstyle.css" />
   <script src="../js/include_header_and_footer.js"></script>
+  <script src="../js/result.js"></script>
 </head>
 <body>
   <div id="header"></div>
@@ -16,38 +17,38 @@
       <p>Answer the following questions</p>
       
       <div class="self-assessment">
-        <form method='POST'>
+        <form onsubmit="return handleSubmit(event)">
             <div class="question">
               <p>1. How often do you update your passwords?</p>
-              <label><input type="radio" name="q1" value="monthly"> Every month</label><br>
+              <label><input type="radio" name="q1" value="monthly" required> Every month</label><br>
               <label><input type="radio" name="q1" value="yearly"> Once a year</label><br>
               <label><input type="radio" name="q1" value="never"> Never</label><br>
             </div>
         
             <div class="question">
               <p>2. Do you use the same password for multiple accounts?</p>
-              <label><input type="radio" name="q2" value="always"> Yes, always</label><br>
+              <label><input type="radio" name="q2" value="always" required> Yes, always</label><br>
               <label><input type="radio" name="q2" value="sometimes"> Sometimes</label><br>
               <label><input type="radio" name="q2" value="never"> Never</label><br>
             </div>
         
             <div class="question">
               <p>3. How do you recognize a phishing email?</p>
-              <label><input type="radio" name="q3" value="sender"> I look at the sender's address</label><br>
+              <label><input type="radio" name="q3" value="sender" required> I look at the sender's address</label><br>
               <label><input type="radio" name="q3" value="click"> I click the link to verify</label><br>
               <label><input type="radio" name="q3" value="ignore"> I ignore it</label><br>
             </div>
         
             <div class="question">
               <p>4. Do you use two-factor authentication (2FA)?</p>
-              <label><input type="radio" name="q4" value="always"> Always</label><br>
+              <label><input type="radio" name="q4" value="always" required> Always</label><br>
               <label><input type="radio" name="q4" value="sometimes"> Sometimes</label><br>
               <label><input type="radio" name="q4" value="never"> Never</label><br>
             </div>
         
             <div class="question">
               <p>5. How do you handle software updates?</p>
-              <label><input type="radio" name="q5" value="immediately"> Update immediately</label><br>
+              <label><input type="radio" name="q5" value="immediately" required> Update immediately</label><br>
               <label><input type="radio" name="q5" value="delay"> Delay for a while</label><br>
               <label><input type="radio" name="q5" value="ignore"> Ignore them</label><br>
             </div>
