@@ -22,4 +22,5 @@ password.addEventListener('input', () => {
 			break;
 	}
 	passwordStrengthDisplay.innerHTML = 'Strength: ' + strength;
+	document.getElementById("time_to_crack").innerHTML = "Time to crack: " + passwordStrength.crack_times_display.offline_slow_hashing_1e4_per_second;
 });
