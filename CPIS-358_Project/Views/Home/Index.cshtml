@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CyberSafe - Cyber Security Awareness</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/main.js"></script>
-  <script src="../js/include_header_and_footer.js"></script>
+  <link rel="stylesheet" href="~/css/style.css" />
+  <script src="~/js/main.js"></script>
+  <script src="~/js/include_header_and_footer.js"></script>
 </head>
 <body>
   <header id="header"></header> 
@@ -60,7 +60,7 @@
           <div class="feature-icon">🔒</div>
           <h3>Password Strength Checker</h3>
           <p>Verify the strength of your passwords and learn how to create secure ones.</p>
-          <a href="password_checker.html" class="feature-link">Check Your Password</a>
+          <a asp-action="Password_checker" asp-controller="Home" class="feature-link">Check Your Password</a>
         </div>
       </div>
     </section>
