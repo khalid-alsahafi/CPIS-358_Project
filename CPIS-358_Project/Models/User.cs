@@ -1,11 +1,15 @@
-﻿namespace CPIS_358_Project.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CPIS_358_Project.Models
 {
     public class User
     {
-        public string username { get; set; }
+        [Key]
+        public int id { get; set; }
+        public string Username { get; set; }
         public string email { get; set; }
-        public string password { get; set; }
-        public int highestScore { get; set; }
-        public int lastScore { get; set; }
+        public string Password { get; set; }
+        public int HighestScore { get; set; }
+        public int LastScore { get; set; }
     }
 }
