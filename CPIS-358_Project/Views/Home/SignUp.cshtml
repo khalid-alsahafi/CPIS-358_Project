@@ -9,7 +9,7 @@
     <body>
         <div id="header"></div>
         <div class="login light_shadow">
-            <form class="login sign_up rounded_corners" method="post" asp-action="Register" asp-controller="AccountController">
+            <form class="login sign_up rounded_corners" method="post" asp-action="Register" asp-controller="Account">
                 @Html.AntiForgeryToken()
                 <input asp-for="Username" type="text" placeholder="Username">
 				<span asp-validation-for="Username" class="text-danger"></span>
