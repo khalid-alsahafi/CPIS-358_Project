@@ -12,9 +12,11 @@ namespace CPIS_358_Project
 
             // Add services to the container.  
             builder.Services.AddControllersWithViews();
+
             builder.Services.AddDbContext<UserDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => // Replace AddDefaultIdentity with AddIdentity  
+
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
             })

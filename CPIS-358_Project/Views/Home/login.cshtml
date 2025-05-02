@@ -1,22 +1,36 @@
+@model CPIS_358_Project.Models.LoginModelView
+@{
+    ViewData["Title"] = "Login";
+}
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/mainstyle.css"/>
-        <script src="../js/include_header_and_footer.js"></script>
-    </head>
-    <body class="login">
-        <div class="login light_shadow">
-            <form method="post" class="login rounded_corners">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button class="submit-login">Login</button>
-            <br>
-            <a href="../html/forgot_password.html">Forgot username or password?</a>
-            <br>
-            <a asp-action="SignUp" asp-controller="Home">Don't have an account?</a>
-            </form>
-        </div>
-    </body>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/mainstyle.css" />
+</head>
+<body class="login">
+    <div class="login light_shadow">
+        <form asp-action="Login" asp-controller="Account" method="post" class="login rounded_corners">
+            @Html.AntiForgeryToken()
+
+            <input asp-for="Username" type="text" placeholder="Username" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+
+            <input asp-for="Password" type="password" placeholder="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+            <button class="submit-login">Login</button>
+            <br />
+            <a href="#">Forgot username or password?</a>
+            <br />
+            <a asp-action="Register" asp-controller="Account">Don't have an account?</a>
+        </form>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
 </html>
