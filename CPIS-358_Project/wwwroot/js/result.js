@@ -30,7 +30,7 @@ function handleSubmit(event) {
   };
 
   localStorage.setItem("quizResults", JSON.stringify(results));
-  window.location.href = "results.html";
+  window.location.href = "/Home/Results"
   return false;
 }
 
