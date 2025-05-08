@@ -7,6 +7,8 @@
 	<title>@ViewData["Title"] - CPIS_358_Project</title>
 	<!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/mainstyle.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
 	<link rel="stylesheet" href="~/CPIS_358_Project.styles.css" asp-append-version="true" />
 </head>
 
@@ -20,7 +22,14 @@
                        <li><a asp-action="AwarenessTest" asp-controller="Home">Awareness Test</a></li>
                        <li><a asp-action="Resourecs" asp-controller="Home">Resources</a></li>
                        <li><a asp-action="PasswordChecker" asp-controller="Home">Password Checker</a></li>
-                       <li><a asp-action="Login" asp-controller="Home" class="login-btn">Login</a></li>
+					   @if (User.Identity.IsAuthenticated)
+					   {
+						   <li><a asp-action="UserProfile" asp-controller="Home">@User.Identity.Name</a></li>
+						   <li><a asp-action="Logout" asp-controller="Account" class="login-btn">Logout</a></li>
+					   }
+					   else {
+						   <li><a asp-action="Login" asp-controller="Home" class="login-btn">Login</a></li>
+					   }
                  </ul>
 			</div>
 		</nav>

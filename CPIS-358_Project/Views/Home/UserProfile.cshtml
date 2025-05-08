@@ -1,10 +1,8 @@
-﻿<!DOCTYPE HTML>
-<html>
-	<head>
-		<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-		<link rel="stylesheet" href="~/CPIS_358_Project.styles.css" asp-append-version="true" />
-	</head>
-	<body>
-		<h1>User Information Page</h1>
-	</body>
-</html>
+﻿@if (User.Identity.IsAuthenticated == true)
+{
+	<h1>Welcome @User.Identity.Name, this is your profile page.</h1>
+}
+else
+{
+	<h1>You are NOT logged in</h1>
+}

@@ -22,6 +22,14 @@ namespace CPIS_358_Project
             })
             .AddEntityFrameworkStores<UserDbContext>();
 
+            builder.Services.AddSession(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true; // Make the session cookie essential
+            });
+
+            builder.Services.AddAuthentication();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.  
@@ -32,10 +40,13 @@ namespace CPIS_358_Project
                 app.UseHsts();
             }
 
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -43,6 +54,7 @@ namespace CPIS_358_Project
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            app.UseSession();
             app.Run();
         }
     }

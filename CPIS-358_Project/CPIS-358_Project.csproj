@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>CPIS_358_Project</RootNamespace>
+    <UserSecretsId>b4043ff1-b027-4d97-a2f0-cc6e28c8b8b2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,17 +14,18 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.25" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.25" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.25" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.25">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.18" />
   </ItemGroup>
 
   <ItemGroup>
