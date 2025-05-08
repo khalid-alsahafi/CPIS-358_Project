@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -6,13 +6,5 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>CPIS_358_Project</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="Views\Home\header.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Home\header.cshtml" />
-  </ItemGroup>
 
 </Project>
