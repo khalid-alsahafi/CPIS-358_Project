@@ -22,7 +22,23 @@ namespace CPIS_358_Project.Controllers
         {
             return View();
         }
-        public IActionResult Password_Checker()
+        public IActionResult PasswordChecker()
+        {
+            return View();
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+        public IActionResult AwarenessTest()
+        {
+            return View();
+        }
+        public IActionResult Results()
         {
             return View();
         }
