@@ -34,6 +34,35 @@ function handleSubmit(event) {
   return false;
 }
 
+  async function submitScore(finalScore) {
+    // 1. Read the antiforgery token from the hidden field
+    const token = document.querySelector('input[name="__RequestVerificationToken"]').value;  
+    // 2. POST JSON using Fetch
+    const response = await fetch('/Account/UpdateScores', {
+      method: 'POST',                                              // HTTP POST :contentReference[oaicite:2]{index=2}
+      headers: {
+        'Content-Type': 'application/json',                        // JSON payload :contentReference[oaicite:3]{index=3}
+        'RequestVerificationToken': token                          // CSRF token header :contentReference[oaicite:4]{index=4}
+      },
+      body: JSON.stringify({ score: finalScore })                   // send { "score": 42 } :contentReference[oaicite:5]{index=5}
+    });
+
+    // 3. Check for success
+    if (!response.ok) {                                             // check response.ok before parsing :contentReference[oaicite:6]{index=6}
+      console.error('Save failed:', await response.text());
+    } else {
+      const data = await response.json();
+      console.log('Last score:', data.last, 'Best score:', data.best);
+    }
+  }
+
+  // Hook into your result display logic
+  const data = JSON.parse(localStorage.getItem("quizResults"));
+  if (data) {
+    document.getElementById("score").textContent = `${data.awarenessScore}%`;
+    submitScore(data.pointsEarned);  // send to server instead of auto?submitting the form
+  }
+
 
 const data = JSON.parse(localStorage.getItem("quizResults"));
 
@@ -42,6 +71,7 @@ if (data) {
   document.getElementById("totalQuestions").textContent = data.totalQuestions;
   document.getElementById("pointsEarned").textContent = data.pointsEarned;
   document.getElementById("maxPoints").textContent = data.maxPoints;
+  submitScore(data.pointsEarned);
 }
 
 const score = parseFloat(data.awarenessScore);

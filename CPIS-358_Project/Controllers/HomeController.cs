@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using CPIS_358_Project.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CPIS_358_Project.Controllers
@@ -7,10 +8,12 @@ namespace CPIS_358_Project.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private UserManager<IdentityUser> _userManager;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, UserManager<IdentityUser> userManager)
         {
             _logger = logger;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -42,7 +45,13 @@ namespace CPIS_358_Project.Controllers
         {
             return View();
         }
-        public IActionResult UserProfile()
+        public async Task<IActionResult> UserProfile()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            return View(user);
+        }
+
+        public IActionResult Resources()
         {
             return View();
         }

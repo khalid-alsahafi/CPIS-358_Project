@@ -13,63 +13,64 @@
 </head>
 
 <body>
-	<header>
-		<nav>
-			</button>
-				<div class="logo">CyberSafe</div>
-                 <ul class="nav-links">
-                       <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                       <li><a asp-action="AwarenessTest" asp-controller="Home">Awareness Test</a></li>
-                       <li><a asp-action="Resourecs" asp-controller="Home">Resources</a></li>
-                       <li><a asp-action="PasswordChecker" asp-controller="Home">Password Checker</a></li>
-					   @if (User.Identity.IsAuthenticated)
-					   {
-						   <li><a asp-action="UserProfile" asp-controller="Home">@User.Identity.Name</a></li>
-						   <li><a asp-action="Logout" asp-controller="Account" class="login-btn">Logout</a></li>
-					   }
-					   else {
-						   <li><a asp-action="Login" asp-controller="Home" class="login-btn">Login</a></li>
-					   }
-                 </ul>
-			</div>
-		</nav>
-	</header>
-	<div class="container">
-		<main role="main" class="pb-3">
-			@RenderBody()
-		</main>
-	</div>
-
-	<footer class="border-top footer text-muted mt-auto py-3">
+	<div class="page-wrapper">
+		<header>
+			<nav>
+				</button>
+					<div class="logo">CyberSafe</div>
+					 <ul class="nav-links">
+						   <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+						   <li><a asp-action="AwarenessTest" asp-controller="Home">Awareness Test</a></li>
+						   <li><a asp-action="Resources" asp-controller="Home">Resources</a></li>
+						   <li><a asp-action="PasswordChecker" asp-controller="Home">Password Checker</a></li>
+						   @if (User.Identity.IsAuthenticated)
+						   {
+							   <li><a asp-action="UserProfile" asp-controller="Home">@User.Identity.Name</a></li>
+							   <li><a asp-action="Logout" asp-controller="Account" class="login-btn">Logout</a></li>
+						   }
+						   else {
+							   <li><a asp-action="Login" asp-controller="Home" class="login-btn">Login</a></li>
+						   }
+					 </ul>
+			</nav>
+		</header>
 		<div class="container">
-			<div class="footer-content">
-				<div class="col-md-4">
-					<h5>CyberSafe</h5>
-				</div>
-				<div class="footer-links">
-					<h5>Quick Links</h5>
-					<ul>
-						<li><a asp-controller="Home" asp-action="Index">Home</a></li>
-						<li><a asp-controller="Home" asp-action="Assessment">Awareness Test</a></li>
-						<li><a asp-controller="Home" asp-action="Resources">Resources</a></li>
-						<li><a asp-controller="Home" asp-action="Password_Checker">Password Checker</a></li>
-					</ul>
-				</div>
-				<div class="footer-contact">
-					<h5>Contact</h5>
-					<a asp-controller="Home" asp-action="ContactUs">Contact Us</a>
-				</div>
-			</div>
-			<div class="text-center pt-3">
-				&copy; 2025 CyberSafe. All rights reserved.
-			</div>
+			<main role="main" class="pb-3">
+				@RenderBody()
+			</main>
 		</div>
-	</footer>
 
-	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="~/js/site.js" asp-append-version="true"></script>
-	@await RenderSectionAsync("Scripts", required: false)
+	</div>
+		<footer class="border-top footer text-muted mt-auto py-3">
+			<div class="container">
+				<div class="footer-content">
+					<div class="col-md-4">
+						<h5>CyberSafe</h5>
+					</div>
+					<div class="footer-links">
+						<h5>Quick Links</h5>
+						<ul>
+							<li><a asp-controller="Home" asp-action="Index">Home</a></li>
+							<li><a asp-controller="Home" asp-action="Assessment">Awareness Test</a></li>
+							<li><a asp-controller="Home" asp-action="Resources">Resources</a></li>
+							<li><a asp-controller="Home" asp-action="Password_Checker">Password Checker</a></li>
+						</ul>
+					</div>
+					<div class="footer-contact">
+						<h5>Contact</h5>
+						<a asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+					</div>
+				</div>
+				<div class="text-center pt-3">
+					&copy; 2025 CyberSafe. All rights reserved.
+				</div>
+			</div>
+		</footer>
+
+		<script src="~/lib/jquery/dist/jquery.min.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="~/js/site.js" asp-append-version="true"></script>
+		@await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>

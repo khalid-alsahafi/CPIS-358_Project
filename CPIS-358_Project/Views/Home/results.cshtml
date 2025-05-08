@@ -32,15 +32,17 @@
         </div>
 
         <div class="results-buttons">
-            <a href="resources.html" class="cta-button">View Resources</a>
-            <a href="assessment.html" class="cta-button">Retake Assessment</a>
-    
+            <a asp-action="Resources" asp-controller="Home" class="cta-button">View Resources</a>
+            <a asp-action="AwarenessTest" asp-controller="Home" class="cta-button">Retake Assessment</a>
         </div>
       </div>
       
     </section>
   </main>
   <div id="footer"></div>
+  <form method="post" asp-action="SaveScore" asp-controller="Account" id="scoreForm">
+      <input type="hidden" name="score" id="scoreInput" />
+  </form>
   <script src="../js/result.js"></script>
 </body>
 </html>
