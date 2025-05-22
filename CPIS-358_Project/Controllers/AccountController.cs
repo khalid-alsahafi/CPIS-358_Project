@@ -8,9 +8,9 @@ namespace CPIS_358_Project.Controllers
     public class AccountController : Controller
     {
         private UserDbContext _context;
-        private UserManager<IdentityUser> _userManager;
-        private SignInManager<IdentityUser> _signInManager;
-        public AccountController(UserDbContext context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        private UserManager<User> _userManager;
+        private SignInManager<User> _signInManager;
+        public AccountController(UserDbContext context, UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _context = context;
             _userManager = userManager;

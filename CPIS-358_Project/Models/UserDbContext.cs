@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CPIS_358_Project.Models
 
 {
-    public class UserDbContext : IdentityDbContext<IdentityUser>
+    public class UserDbContext : IdentityDbContext<User>
     {
         #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         public UserDbContext(DbContextOptions<UserDbContext> options) : base(options) { }

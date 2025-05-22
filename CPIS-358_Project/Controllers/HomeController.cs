@@ -8,9 +8,9 @@ namespace CPIS_358_Project.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private UserManager<IdentityUser> _userManager;
+        private UserManager<User> _userManager;
 
-        public HomeController(ILogger<HomeController> logger, UserManager<IdentityUser> userManager)
+        public HomeController(ILogger<HomeController> logger, UserManager<User> userManager)
         {
             _logger = logger;
             _userManager = userManager;
